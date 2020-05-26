@@ -3,6 +3,7 @@ const express = require("express");
 const Schema = mongoose.Schema;
 const app = express();
 const jsonParser = express.json();
+require('dotenv').config()
 
 
 var jwt = require('jsonwebtoken');
@@ -61,9 +62,17 @@ app.use(function (req, res, next) {
 
     next();
 });
-mongoose.connect("mongodb://localhost:27017/usersdb", { useNewUrlParser: true }, function(err){
+
+const connectionString  = 'mongodb+srv://admin:admin@cluster0-zdlya.mongodb.net/test?retryWrites=true&w=majority'
+//const connectionString  = 'mongodb://localhost:27017/usersdb'
+
+mongoose.connect(connectionString, { useNewUrlParser: true }, function(err){
     if(err) return console.log(err);
-    let server = app.listen(3000, function(){
+    let port = process.env.PORT;
+    if (port == null || port == "") {
+        port = 3000;
+    }
+    let server = app.listen(port, function(){
 
 
     console.log("Сервер ожидает подключения...");
