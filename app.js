@@ -20,23 +20,23 @@ const Chat = mongoose.model('Chat', chatScheme)
 
 app.use('/images', express.static(__dirname + '/images'));
 const allSmiles = {
-     'ha' : 'http://localhost:3000/images/happy.png', 
-     'ха' : 'http://localhost:3000/images/happy.png',
-     'ахахах': 'http://localhost:3000/images/happy.png',
-     'лол' : 'http://localhost:3000/images/happy.png',
-     'кек' : 'http://localhost:3000/images/happy.png',
-     ':)' : 'http://localhost:3000/images/happy.png',
-     'угар' : 'http://localhost:3000/images/happy.png',
-     'смешно' : 'http://localhost:3000/images/happy.png',
-     'смех' : 'http://localhost:3000/images/happy.png',
+     'ha' : 'https://back-online-chat.herokuapp.com/happy.png', 
+     'ха' : 'https://back-online-chat.herokuapp.com/happy.png',
+     'ахахах': 'https://back-online-chat.herokuapp.com/happy.png',
+     'лол' : 'https://back-online-chat.herokuapp.com/happy.png',
+     'кек' : 'https://back-online-chat.herokuapp.com/happy.png',
+     ':)' : 'https://back-online-chat.herokuapp.com/happy.png',
+     'угар' : 'https://back-online-chat.herokuapp.com/happy.png',
+     'смешно' : 'https://back-online-chat.herokuapp.com/happy.png',
+     'смех' : 'https://back-online-chat.herokuapp.com/happy.png',
 
-     ';(': 'http://localhost:3000/images/sad.png',
-     ':(': 'http://localhost:3000/images/sad.png',
-     'bad': 'http://localhost:3000/images/sad.png',
-     'плохо': 'http://localhost:3000/images/sad.png',
-     'жаль': 'http://localhost:3000/images/sad.png',
-     'слезы': 'http://localhost:3000/images/sad.png',
-     'печаль': 'http://localhost:3000/images/sad.png',
+     ';(': 'https://back-online-chat.herokuapp.com/sad.png',
+     ':(': 'https://back-online-chat.herokuapp.com/sad.png',
+     'bad': 'https://back-online-chat.herokuapp.com/sad.png',
+     'плохо': 'https://back-online-chat.herokuapp.com/sad.png',
+     'жаль': 'https://back-online-chat.herokuapp.com/sad.png',
+     'слезы': 'https://back-online-chat.herokuapp.com/sad.png',
+     'печаль': 'https://back-online-chat.herokuapp.com/sad.png',
 }
 // app.use((req, res, next) =>  {
 
@@ -77,7 +77,7 @@ mongoose.connect(connectionString, { useNewUrlParser: true }, function(err){
 
     console.log("Сервер ожидает подключения...");
     });
-    var io = require ('socket.io')(server);
+    var io = require ('socket.io')('https://back-online-chat.herokuapp.com');
     
     io.on('connection', function(socket){
         socket.on('disconnect', function(){
