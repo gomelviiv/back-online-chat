@@ -52,7 +52,7 @@ const allSmiles = {
 app.use(express.static(__dirname + "/public"));
 app.use(function (req, res, next) {
 
-    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:8080');
+    res.setHeader('Access-Control-Allow-Origin', 'https://back-online-chat.herokuapp.com/');
 
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
 
