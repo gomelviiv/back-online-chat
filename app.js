@@ -77,7 +77,8 @@ mongoose.connect(connectionString, { useNewUrlParser: true }, function(err){
 
     console.log("Сервер ожидает подключения...");
     });
-    var io = require ('socket.io')('https://back-online-chat.herokuapp.com');
+    // var io = require ('socket.io')(server);
+    var io = require ('socket.io')(server);
     
     io.on('connection', function(socket){
         socket.on('disconnect', function(){
