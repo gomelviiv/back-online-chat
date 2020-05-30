@@ -19,24 +19,24 @@ const Message = mongoose.model('Message', messageScheme)
 const Chat = mongoose.model('Chat', chatScheme)
 
 app.use('/images', express.static(__dirname + '/images'));
-const allSmiles = {
-     'ha' : 'https://back-online-chat.herokuapp.com/happy.png', 
-     'ха' : 'https://back-online-chat.herokuapp.com/happy.png',
-     'ахахах': 'https://back-online-chat.herokuapp.com/happy.png',
-     'лол' : 'https://back-online-chat.herokuapp.com/happy.png',
-     'кек' : 'https://back-online-chat.herokuapp.com/happy.png',
-     ':)' : 'https://back-online-chat.herokuapp.com/happy.png',
-     'угар' : 'https://back-online-chat.herokuapp.com/happy.png',
-     'смешно' : 'https://back-online-chat.herokuapp.com/happy.png',
-     'смех' : 'https://back-online-chat.herokuapp.com/happy.png',
+const allSmiles = { 
+     'ha' : 'https://back-online-chat.herokuapp.com/images/happy.png', 
+     'ха' : 'https://back-online-chat.herokuapp.com/images/happy.png',
+     'ахахах': 'https://back-online-chat.herokuapp.com/images/happy.png',
+     'лол' : 'https://back-online-chat.herokuapp.com/images/happy.png',
+     'кек' : 'https://back-online-chat.herokuapp.com/images/happy.png',
+     ':)' : 'https://back-online-chat.herokuapp.com/images/happy.png',
+     'угар' : 'https://back-online-chat.herokuapp.com/images/happy.png',
+     'смешно' : 'https://back-online-chat.herokuapp.com/images/happy.png',
+     'смех' : 'https://back-online-chat.herokuapp.com/images/happy.png',
 
-     ';(': 'https://back-online-chat.herokuapp.com/sad.png',
-     ':(': 'https://back-online-chat.herokuapp.com/sad.png',
-     'bad': 'https://back-online-chat.herokuapp.com/sad.png',
-     'плохо': 'https://back-online-chat.herokuapp.com/sad.png',
-     'жаль': 'https://back-online-chat.herokuapp.com/sad.png',
-     'слезы': 'https://back-online-chat.herokuapp.com/sad.png',
-     'печаль': 'https://back-online-chat.herokuapp.com/sad.png',
+     ';(': 'https://back-online-chat.herokuapp.com/images/sad.png',
+     ':(': 'https://back-online-chat.herokuapp.com/images/sad.png',
+     'bad': 'https://back-online-chat.herokuapp.com/images/sad.png',
+     'плохо': 'https://back-online-chat.herokuapp.com/images/sad.png',
+     'жаль': 'https://back-online-chat.herokuapp.com/images/sad.png',
+     'слезы': 'https://back-online-chat.herokuapp.com/images/sad.png',
+     'печаль': 'https://back-online-chat.herokuapp.com/images/sad.png',
 }
 // app.use((req, res, next) =>  {
 
